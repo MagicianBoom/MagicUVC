@@ -58,8 +58,6 @@
 ..\obj\led.o: ..\INC\bsp.h
 ..\obj\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\led.o: ..\USER\app_cfg.h
-..\obj\led.o: ..\INC\bsp_led.h
-..\obj\led.o: ..\INC\sys.h
 ..\obj\led.o: ..\INC\applications\scheduler.h
 ..\obj\led.o: ..\INC\drivers\time.h
 ..\obj\led.o: ..\INC\applications\init.h

@@ -36,11 +36,11 @@ void DebugMon_Handler(void)
 {
 }
 
-void SysTick_Handler(void)
-{
-	sysTickUptime++;
-	sys_time();
-}
+//void SysTick_Handler(void)
+//{
+//	sysTickUptime++;
+//	sys_time();
+//}
 
 void TIM3_IRQHandler(void)
 {

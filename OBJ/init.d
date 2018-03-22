@@ -56,9 +56,8 @@
 ..\obj\init.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\init.o: ..\INC\bsp.h
 ..\obj\init.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\init.o: ..\INC\drivers\led.h
 ..\obj\init.o: ..\USER\app_cfg.h
-..\obj\init.o: ..\INC\bsp_led.h
-..\obj\init.o: ..\INC\sys.h
 ..\obj\init.o: ..\INC\applications\scheduler.h
 ..\obj\init.o: ..\INC\drivers\time.h
 ..\obj\init.o: ..\INC\applications\init.h
@@ -72,7 +71,6 @@
 ..\obj\init.o: ..\INC\drivers\pwm_out.h
 ..\obj\init.o: ..\INC\drivers\mpu6050.h
 ..\obj\init.o: ..\INC\drivers\i2c_soft.h
-..\obj\init.o: ..\INC\drivers\led.h
 ..\obj\init.o: ..\INC\applications\ctrl.h
 ..\obj\init.o: ..\INC\applications\rc.h
 ..\obj\init.o: ..\INC\applications\imu.h

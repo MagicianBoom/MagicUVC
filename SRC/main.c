@@ -37,7 +37,7 @@ void  AppTaskStart (void *p_arg)
 	CPU_Init();
 	BSP_Tick_Init();
 	Init_Finish = All_Init();
-
+	
 #if OS_CFG_STAT_TASK_EN > 0u
      OSStatTaskCPUUsageInit(&err);   
 #endif
@@ -46,12 +46,16 @@ void  AppTaskStart (void *p_arg)
     CPU_IntDisMeasMaxCurReset();
 #endif
                                         
-    AppTaskCreate();                                           
-    while (1)
-	{        
-		LED_MPU_Err();
-		OSTimeDly(100, OS_OPT_TIME_DLY, &err);
-    }
+    AppTaskCreate();  
+
+	//System testing for ucOS magicUVC by LiuYang
+	printf("System Start!\n");
+	printf("System Start!\n");
+	printf("System Start!\n");
+	printf("System Start!\n");
+	printf("System Start!\n");
+	//Test end
+
 }
 
 //=======================================================================================
@@ -68,12 +72,7 @@ u8 Init_Finish = 0;
 int main(void)
 {
     OS_ERR  err;
-//	
-//	while(1)
-//	{
-//		Duty_Loop(); 
-//	}
-		
+
     OSInit(&err);                                               /* Init uC/OS-III.                                      */
 
 	OSTaskCreate((OS_TCB       *)&AppTaskStartTCB,              /* Create the start task                                */

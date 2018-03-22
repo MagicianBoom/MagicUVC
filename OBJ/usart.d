@@ -35,6 +35,7 @@
 ..\obj\usart.o: ..\LIB\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 ..\obj\usart.o: ..\LIB\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 ..\obj\usart.o: ..\LIB\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\usart.o: ..\INC\applications\data_transfer.h
 ..\obj\usart.o: ..\INC\applications\height_ctrl.h
 ..\obj\usart.o: ..\INC\applications\parameter.h
@@ -45,7 +46,6 @@
 ..\obj\usart.o: ..\INC\drivers\mpu6050.h
 ..\obj\usart.o: ..\INC\includes.h
 ..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\usart.o: ..\uCOS\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
@@ -65,9 +65,8 @@
 ..\obj\usart.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\usart.o: ..\INC\bsp.h
 ..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\usart.o: ..\INC\drivers\led.h
 ..\obj\usart.o: ..\USER\app_cfg.h
-..\obj\usart.o: ..\INC\bsp_led.h
-..\obj\usart.o: ..\INC\sys.h
 ..\obj\usart.o: ..\INC\applications\scheduler.h
 ..\obj\usart.o: ..\INC\applications\init.h
 ..\obj\usart.o: ..\INC\drivers\pwm_in.h

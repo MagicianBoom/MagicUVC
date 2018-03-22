@@ -58,9 +58,8 @@
 ..\obj\ak8975.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\ak8975.o: ..\INC\bsp.h
 ..\obj\ak8975.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ak8975.o: ..\INC\drivers\led.h
 ..\obj\ak8975.o: ..\USER\app_cfg.h
-..\obj\ak8975.o: ..\INC\bsp_led.h
-..\obj\ak8975.o: ..\INC\sys.h
 ..\obj\ak8975.o: ..\INC\applications\scheduler.h
 ..\obj\ak8975.o: ..\INC\drivers\time.h
 ..\obj\ak8975.o: ..\INC\applications\init.h

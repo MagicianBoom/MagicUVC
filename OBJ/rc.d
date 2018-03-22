@@ -56,9 +56,8 @@
 ..\obj\rc.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\rc.o: ..\INC\bsp.h
 ..\obj\rc.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\rc.o: ..\INC\drivers\led.h
 ..\obj\rc.o: ..\USER\app_cfg.h
-..\obj\rc.o: ..\INC\bsp_led.h
-..\obj\rc.o: ..\INC\sys.h
 ..\obj\rc.o: ..\INC\applications\scheduler.h
 ..\obj\rc.o: ..\INC\drivers\time.h
 ..\obj\rc.o: ..\INC\applications\init.h

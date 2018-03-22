@@ -60,9 +60,8 @@
 ..\obj\ms5611.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\ms5611.o: ..\INC\bsp.h
 ..\obj\ms5611.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ms5611.o: ..\INC\drivers\led.h
 ..\obj\ms5611.o: ..\USER\app_cfg.h
-..\obj\ms5611.o: ..\INC\bsp_led.h
-..\obj\ms5611.o: ..\INC\sys.h
 ..\obj\ms5611.o: ..\INC\applications\scheduler.h
 ..\obj\ms5611.o: ..\INC\applications\init.h
 ..\obj\ms5611.o: ..\INC\applications\parameter.h

@@ -39,6 +39,7 @@ u8 All_Init()
 //	
 	LED_Init();								//LED功能初始化
 //	
+	uart_init(115200); 
 	Usart2_Init(500000);			//串口2初始化，函数参数为波特率
 	Uart4_Init(500000);
 
@@ -53,23 +54,23 @@ u8 All_Init()
 	
 //	
 	ak8975_ok = !(ANO_AK8975_Run());
-//	
-//	if( !mpu6050_ok )
-//	{
-//		LED_MPU_Err();
-//	}
-//	else if( !ak8975_ok )
-//	{
-//		LED_Mag_Err();
-//	}
-//	else if( !ms5611_ok )
-//	{
-//		LED_MS5611_Err();
-//	}
-//	
-//	aircraft_mode_led(MAXMOTORS);
-//	
-//	Cycle_Time_Init();
+	
+	if( !mpu6050_ok )
+	{
+		LED_MPU_Err();
+	}
+	else if( !ak8975_ok )
+	{
+		LED_Mag_Err();
+	}
+	else if( !ms5611_ok )
+	{
+		LED_MS5611_Err();
+	}
+	
+	aircraft_mode_led(MAXMOTORS);
+	
+	Cycle_Time_Init();
 	
  	return (1);
 }

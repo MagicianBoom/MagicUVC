@@ -389,6 +389,11 @@
               <FileType>2</FileType>
               <FilePath>.\startup_stm32f40_41xxx.s</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SRC\applications\stm32f4xx_it.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -460,16 +465,6 @@
               <FilePath>..\SRC\applications\rc.c</FilePath>
             </File>
             <File>
-              <FileName>scheduler.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SRC\applications\scheduler.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SRC\applications\stm32f4xx_it.c</FilePath>
-            </File>
-            <File>
               <FileName>usb_config.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SRC\applications\usb_config.c</FilePath>
@@ -523,11 +518,6 @@
               <FileName>sys.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SRC\sys.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\SRC\bsp_led.c</FilePath>
             </File>
             <File>
               <FileName>bsp.c</FileName>

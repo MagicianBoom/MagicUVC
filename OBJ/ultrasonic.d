@@ -56,9 +56,8 @@
 ..\obj\ultrasonic.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\ultrasonic.o: ..\INC\bsp.h
 ..\obj\ultrasonic.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\ultrasonic.o: ..\INC\drivers\led.h
 ..\obj\ultrasonic.o: ..\USER\app_cfg.h
-..\obj\ultrasonic.o: ..\INC\bsp_led.h
-..\obj\ultrasonic.o: ..\INC\sys.h
 ..\obj\ultrasonic.o: ..\INC\applications\scheduler.h
 ..\obj\ultrasonic.o: ..\INC\drivers\time.h
 ..\obj\ultrasonic.o: ..\INC\applications\init.h

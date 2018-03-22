@@ -57,9 +57,8 @@
 ..\obj\pwm_out.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\pwm_out.o: ..\INC\bsp.h
 ..\obj\pwm_out.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\pwm_out.o: ..\INC\drivers\led.h
 ..\obj\pwm_out.o: ..\USER\app_cfg.h
-..\obj\pwm_out.o: ..\INC\bsp_led.h
-..\obj\pwm_out.o: ..\INC\sys.h
 ..\obj\pwm_out.o: ..\INC\applications\scheduler.h
 ..\obj\pwm_out.o: ..\INC\drivers\time.h
 ..\obj\pwm_out.o: ..\INC\applications\init.h

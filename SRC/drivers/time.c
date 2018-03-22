@@ -34,11 +34,11 @@ void TIM_CONF()   //APB1  84M
 	
     TIM_TimeBaseStructure.TIM_CounterMode=TIM_CounterMode_Up;   //向上计数
 	
-		TIM_TimeBaseInit(SYS_TIMx,&TIM_TimeBaseStructure);
+	TIM_TimeBaseInit(SYS_TIMx,&TIM_TimeBaseStructure);
 
-		TIM_ClearFlag(SYS_TIMx,TIM_FLAG_Update);
+	TIM_ClearFlag(SYS_TIMx,TIM_FLAG_Update);
 
-		TIM_ITConfig(SYS_TIMx,TIM_IT_Update,ENABLE);
+	TIM_ITConfig(SYS_TIMx,TIM_IT_Update,ENABLE);
 		
 		
     TIM_Cmd(SYS_TIMx, ENABLE);																		
@@ -61,9 +61,9 @@ void TIM_INIT()
 {
     TIM_CONF();
     TIM_NVIC();
-	
-		/* TIM2 重新开时钟，开始计时 */
-	  RCC_APB1PeriphClockCmd(SYS_RCC_TIMx , ENABLE);
+
+	/* TIM2 重新开时钟，开始计时 */
+	RCC_APB1PeriphClockCmd(SYS_RCC_TIMx , ENABLE);
 }
 
 
@@ -91,8 +91,8 @@ uint32_t GetSysTime_us(void)
 	register uint32_t ms;
 	u32 value;
 	ms = sysTickUptime;
-	value = ms * TICK_US + (SysTick->LOAD - SysTick->VAL) * TICK_US / SysTick->LOAD;
-	return value;
+	value = ms * TICK_US + (SysTick->LOAD - SysTick->VAL) * TICK_US / SysTick->LOAD;//TICK_US 1000；(SysTick->LOAD - SysTick->VAL) * TICK_US / SysTick->LOAD计算微秒数
+	return value;//value 单位为微秒
 }
 
 void Delay_us(uint32_t us)
@@ -111,46 +111,46 @@ int time_1h,time_1m,time_1s,time_1ms;
 
 void sys_time()
 { 
-	if( !Init_Finish )
-	{
-		return;
-	}
-	
-	if(time_1ms < 999)
-	{
-		time_1ms++;
+//	if( !Init_Finish )
+//	{
+//		return;
+//	}
+//	
+//	if(time_1ms < 999)
+//	{
+//		time_1ms++;
 
-		Loop_check();
-	}
-	else
-	{
-		
-		time_1ms =0;
-		if(time_1s<59)
-		{
-			time_1s++;
-		}
-		else
-		{
-			time_1s = 0;
-			if(time_1m<59)
-			{
-				time_1m++;
-			}
-			else
-			{
-				time_1m = 0;
-				if(time_1h<23)
-				{
-					time_1h++;
-				}
-				else
-				{
-					time_1h = 0;
-				}
-			}
-		}
-	}
+//		Loop_check();
+//	}
+//	else
+//	{
+//		
+//		time_1ms =0;
+//		if(time_1s<59)
+//		{
+//			time_1s++;
+//		}
+//		else
+//		{
+//			time_1s = 0;
+//			if(time_1m<59)
+//			{
+//				time_1m++;
+//			}
+//			else
+//			{
+//				time_1m = 0;
+//				if(time_1h<23)
+//				{
+//					time_1h++;
+//				}
+//				else
+//				{
+//					time_1h = 0;
+//				}
+//			}
+//		}
+//	}
 }
 
 volatile float Cycle_T[GET_TIME_NUM][3];
@@ -167,6 +167,13 @@ u32 Get_Cycle_T(u8 item)
 	Cycle_T[item][OLD] = Cycle_T[item][NOW];	//上一次的时间
 	Cycle_T[item][NOW] = GetSysTime_us(); //本次的时间
 	Cycle_T[item][NEW] = ( ( Cycle_T[item][NOW] - Cycle_T[item][OLD] ) );//间隔的时间（周期）
+	
+//	//System testing for ucOS magicUVC by LiuYang
+//	printf("Cycle_T[item][NOW]:%f\n",Cycle_T[item][NOW]);
+//	printf("Cycle_T[item][OLD]:%f\n",Cycle_T[item][OLD]);
+//	printf("sysTickUptime:%d\n",sysTickUptime);
+//	//Test end
+	
 	return Cycle_T[item][NEW];
 }
 

@@ -38,13 +38,13 @@
 ..\obj\data_transfer.o: ..\INC\applications\height_ctrl.h
 ..\obj\data_transfer.o: ..\INC\applications\parameter.h
 ..\obj\data_transfer.o: ..\INC\drivers\usart.h
+..\obj\data_transfer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\data_transfer.o: ..\INC\applications\imu.h
 ..\obj\data_transfer.o: ..\INC\applications\mymath.h
 ..\obj\data_transfer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 ..\obj\data_transfer.o: ..\INC\drivers\mpu6050.h
 ..\obj\data_transfer.o: ..\INC\includes.h
 ..\obj\data_transfer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
-..\obj\data_transfer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\data_transfer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\data_transfer.o: ..\uCOS\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
 ..\obj\data_transfer.o: ..\uCOS\uC-CPU\cpu_def.h
@@ -63,9 +63,8 @@
 ..\obj\data_transfer.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\data_transfer.o: ..\INC\bsp.h
 ..\obj\data_transfer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\data_transfer.o: ..\INC\drivers\led.h
 ..\obj\data_transfer.o: ..\USER\app_cfg.h
-..\obj\data_transfer.o: ..\INC\bsp_led.h
-..\obj\data_transfer.o: ..\INC\sys.h
 ..\obj\data_transfer.o: ..\INC\applications\scheduler.h
 ..\obj\data_transfer.o: ..\INC\drivers\time.h
 ..\obj\data_transfer.o: ..\INC\applications\init.h

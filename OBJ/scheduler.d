@@ -57,6 +57,7 @@
 ..\obj\scheduler.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\scheduler.o: ..\INC\bsp.h
 ..\obj\scheduler.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\scheduler.o: ..\INC\drivers\led.h
 ..\obj\scheduler.o: ..\USER\app_cfg.h
 ..\obj\scheduler.o: ..\INC\bsp_led.h
 ..\obj\scheduler.o: ..\INC\sys.h
@@ -72,7 +73,6 @@
 ..\obj\scheduler.o: ..\INC\drivers\mpu6050.h
 ..\obj\scheduler.o: ..\INC\drivers\ak8975.h
 ..\obj\scheduler.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-..\obj\scheduler.o: ..\INC\drivers\led.h
 ..\obj\scheduler.o: ..\INC\applications\rc.h
 ..\obj\scheduler.o: ..\INC\applications\imu.h
 ..\obj\scheduler.o: ..\INC\applications\mymath.h

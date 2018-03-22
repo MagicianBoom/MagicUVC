@@ -57,11 +57,23 @@
 #define  APP_CFG_TASK_START_PRIO                2u
 #define  APP_CFG_TASK_OBJ_PRIO                  3u
 #define  APP_CFG_TASK_EQ_PRIO                   4u
-#define  APP_CFG_TASK_UPDATE_PRIO                             3u
-#define  APP_CFG_TASK_COM_PRIO                                4u
-#define  APP_CFG_TASK_USER_IF_PRIO                            5u
+
+#define  APP_CFG_TASK_1ms_PRIO                    5u
+#define  APP_CFG_TASK_2ms_PRIO                    5u
+#define  APP_CFG_TASK_5ms_PRIO                    5u
+#define  APP_CFG_TASK_10ms_PRIO                   5u
+#define  APP_CFG_TASK_20ms_PRIO                   5u
+#define  APP_CFG_TASK_50ms_PRIO                   5u
+
 #define  APP_CFG_TASK_GUI_PRIO                        (OS_CFG_PRIO_MAX - 4u)
 #define  APP_CFG_TASK_GUIRefresh_PRIO                 (OS_CFG_PRIO_MAX - 4u)
+
+
+
+
+
+
+
 
 
 /*
@@ -79,6 +91,15 @@
 #define  APP_CFG_TASK_USER_IF_STK_SIZE                    1024u
 #define  APP_CFG_TASK_GUI_STK_SIZE                        512u
 #define  APP_CFG_TASK_GUIRefresh_STK_SIZE                 1024u
+#define  APP_CFG_TASK_1ms_STK_SIZE				1024u
+#define  APP_CFG_TASK_2ms_STK_SIZE				1024u
+#define  APP_CFG_TASK_5ms_STK_SIZE				1024u
+#define  APP_CFG_TASK_10ms_STK_SIZE				1024u
+#define  APP_CFG_TASK_20ms_STK_SIZE				1024u
+#define  APP_CFG_TASK_50ms_STK_SIZE				1024u
+
+
+
 
 
 /*

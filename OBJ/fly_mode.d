@@ -57,9 +57,8 @@
 ..\obj\fly_mode.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\fly_mode.o: ..\INC\bsp.h
 ..\obj\fly_mode.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\fly_mode.o: ..\INC\drivers\led.h
 ..\obj\fly_mode.o: ..\USER\app_cfg.h
-..\obj\fly_mode.o: ..\INC\bsp_led.h
-..\obj\fly_mode.o: ..\INC\sys.h
 ..\obj\fly_mode.o: ..\INC\applications\scheduler.h
 ..\obj\fly_mode.o: ..\INC\drivers\time.h
 ..\obj\fly_mode.o: ..\INC\applications\init.h

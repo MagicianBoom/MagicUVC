@@ -411,6 +411,7 @@ void  OSTimeTickHook (void)
 * Note(s)    : 1) This function MUST be placed on entry 15 of the Cortex-M3 vector table.
 *********************************************************************************************************
 */
+extern unsigned int sysTickUptime;
 
 void  OS_CPU_SysTickHandler (void)
 {
@@ -419,6 +420,9 @@ void  OS_CPU_SysTickHandler (void)
 
     CPU_CRITICAL_ENTER();
     OSIntNestingCtr++;                                      /* Tell uC/OS-III that we are starting an ISR             */
+	
+	sysTickUptime++;
+	
     CPU_CRITICAL_EXIT();
 
     OSTimeTick();                                           /* Call uC/OS-III's OSTimeTick()                          */

@@ -74,6 +74,7 @@
 //#include "bsp_gps.h"
 //#include "bsp_oled.h"
 //#include "bsp_mg323.h"
+#include "led.h"
 
 /* 提供给其他C文件调用的函数 */
 void bsp_Init(void);

@@ -57,9 +57,8 @@
 ..\obj\mpu6050.o: ..\uCOS\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
 ..\obj\mpu6050.o: ..\INC\bsp.h
 ..\obj\mpu6050.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\mpu6050.o: ..\INC\drivers\led.h
 ..\obj\mpu6050.o: ..\USER\app_cfg.h
-..\obj\mpu6050.o: ..\INC\bsp_led.h
-..\obj\mpu6050.o: ..\INC\sys.h
 ..\obj\mpu6050.o: ..\INC\applications\scheduler.h
 ..\obj\mpu6050.o: ..\INC\drivers\time.h
 ..\obj\mpu6050.o: ..\INC\applications\init.h
@@ -72,4 +71,3 @@
 ..\obj\mpu6050.o: ..\INC\applications\task.h
 ..\obj\mpu6050.o: ..\INC\applications\mymath.h
 ..\obj\mpu6050.o: ..\INC\drivers\i2c_soft.h
-..\obj\mpu6050.o: ..\INC\drivers\led.h

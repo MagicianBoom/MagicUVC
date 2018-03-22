@@ -53,6 +53,7 @@ void Duty_1ms()
 	Get_Cycle_T(1)/1000000.0f;
 
 	ANO_DT_Data_Exchange();												//数传通信定时调用
+	LED_1ms_DRV();
 }
 
 float test[5];

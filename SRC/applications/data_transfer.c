@@ -44,6 +44,7 @@ void ANO_DT_Send_Data(u8 *dataToSend , u8 length)
 	Usart2_Send(data_to_send, length);
 #endif
 }
+
 static void ANO_DT_Send_Check(u8 head, u8 check_sum)
 {
 	data_to_send[0]=0xAA;
