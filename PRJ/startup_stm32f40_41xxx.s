@@ -176,7 +176,7 @@ __Vectors_Size  EQU  __Vectors_End - __Vectors
 ; Reset handler
 Reset_Handler    PROC
                  EXPORT  Reset_Handler             [WEAK]
-        ;IMPORT  SystemInit					;寄存器代码,不需要在这里调用SystemInit函数,故屏蔽掉,库函数版本代码,可以留下
+        IMPORT  SystemInit					;寄存器代码,不需要在这里调用SystemInit函数,故屏蔽掉,库函数版本代码,可以留下
 											;不过需要在外部实现SystemInit函数,否则会报错.
         IMPORT  __main
                  LDR     R0, =0xE000ED88    ; 使能浮点运算 CP10,CP11
@@ -184,8 +184,8 @@ Reset_Handler    PROC
                  ORR     R1,R1,#(0xF << 20)
                  STR     R1,[R0]
 				 
-                 ;LDR     R0, =SystemInit	;寄存器代码,未用到,屏蔽
-                 ;BLX     R0				;寄存器代码,未用到,屏蔽
+                 LDR     R0, =SystemInit	;寄存器代码,未用到,屏蔽
+                 BLX     R0				;寄存器代码,未用到,屏蔽
                  LDR     R0, =__main
                  BX      R0
                  ENDP

@@ -28,6 +28,7 @@ void Usb_Hid_Init (void)
 	usbd_init();
 	usbd_connect(__TRUE);
 }
+
 void Usb_Hid_Adddata(u8 *dataToSend , u8 length)
 {
 	for(u8 i=0; i<length; i++)
@@ -35,12 +36,14 @@ void Usb_Hid_Adddata(u8 *dataToSend , u8 length)
 		hid_datatemp[hid_datatemp_end++] = dataToSend[i];
 	}
 }
+
 void Usb_Hid_Send (void)
 {
 	static u8 notfull_timeout=0;
-	
+		
 	if(hid_datatemp_end > hid_datatemp_begin)
 	{
+		
 		if((hid_datatemp_end - hid_datatemp_begin) >= 63)
 		{
 			notfull_timeout = 0;
@@ -67,11 +70,13 @@ void Usb_Hid_Send (void)
 				}
 				hid_datatemp_begin = hid_datatemp_end;
 				usbd_hid_get_report_trigger(0, hid_data2send, 64);		//send
+				
 			}
 		}
 	}
 	else if(hid_datatemp_end < hid_datatemp_begin)
 	{
+	
 		if((256 - hid_datatemp_begin + hid_datatemp_end) >= 63)
 		{
 			notfull_timeout = 0;
@@ -133,7 +138,7 @@ void usbd_hid_set_report (U8 rtype, U8 rid, U8 *buf, int len, U8 req) {
   switch (rtype) {
     case HID_REPORT_OUTPUT:
       for(u8 i = 1; i<=(*(buf)); i++)
-				ANO_DT_Data_Receive_Prepare(*(buf+i));		//hid接收到数据会调用此函数
+		ANO_DT_Data_Receive_Prepare(*(buf+i));		//hid接收到数据会调用此函数
       break;
     case HID_REPORT_FEATURE:
       //feat = buf[0];

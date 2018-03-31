@@ -168,12 +168,6 @@ u32 Get_Cycle_T(u8 item)
 	Cycle_T[item][NOW] = GetSysTime_us(); //本次的时间
 	Cycle_T[item][NEW] = ( ( Cycle_T[item][NOW] - Cycle_T[item][OLD] ) );//间隔的时间（周期）
 	
-//	//System testing for ucOS magicUVC by LiuYang
-//	printf("Cycle_T[item][NOW]:%f\n",Cycle_T[item][NOW]);
-//	printf("Cycle_T[item][OLD]:%f\n",Cycle_T[item][OLD]);
-//	printf("sysTickUptime:%d\n",sysTickUptime);
-//	//Test end
-	
 	return Cycle_T[item][NEW];
 }
 

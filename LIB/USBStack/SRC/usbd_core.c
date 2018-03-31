@@ -18,6 +18,7 @@
 #include "string.h"
 #include "usb_for_lib.h"
 #include "version.h"
+#include "usart.h"
 
 U16               USBD_DeviceStatus;
 U8                USBD_DeviceAddress;
@@ -59,7 +60,7 @@ void usbd_init (void) {
   USBD_HighSpeed     = __FALSE;
   usbd_class_init();
   USBD_RTX_TaskInit();
-
+  
   USBD_Init();
 }
 

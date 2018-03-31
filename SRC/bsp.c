@@ -88,7 +88,7 @@ void bsp_Init(void)
 void NVIC_Configuration(void)
 {			
 	/* 设置NVIC优先级分组为Group2：0-3抢占式优先级，0-3的响应式优先级 */
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_3);
 }
 
 /*
@@ -132,21 +132,39 @@ CPU_INT32U  BSP_CPU_ClkFreq (void)
 * Note(s)     : none.
 *********************************************************************************************************
 */
+
+#define TICK_PER_SECOND 1000 
+#define TICK_US	(1000000/TICK_PER_SECOND)
 void BSP_Tick_Init (void)
 {
-    CPU_INT32U  cpu_clk_freq;
-    CPU_INT32U  cnts;
-    
-    cpu_clk_freq = BSP_CPU_ClkFreq();                           /* Determine SysTick reference freq.                    */
-    
-#if (OS_VERSION >= 30000u)
-    cnts  = cpu_clk_freq / (CPU_INT32U)OSCfg_TickRate_Hz;       /* Determine nbr SysTick increments.                    */
-#else
-    cnts  = cpu_clk_freq / (CPU_INT32U)OS_TICKS_PER_SEC;        /* Determine nbr SysTick increments.                    */
-#endif
-    
-//    OS_CPU_SysTickInit(cnts);                                 /* 这里默认的是最高优先级，根据实际情况修改             */
-	SysTick_Config(cnts);   //这里默认的是最低优先级
+//    CPU_INT32U  cpu_clk_freq;
+//    CPU_INT32U  cnts;
+//    
+//    cpu_clk_freq = BSP_CPU_ClkFreq();                           /* Determine SysTick reference freq.                    */
+//    
+//#if (OS_VERSION >= 30000u)
+//    cnts  = cpu_clk_freq / (CPU_INT32U)OSCfg_TickRate_Hz;       /* Determine nbr SysTick increments.                    */
+//#else
+//    cnts  = cpu_clk_freq / (CPU_INT32U)OS_TICKS_PER_SEC;        /* Determine nbr SysTick increments.                    */
+//#endif
+//    
+////    OS_CPU_SysTickInit(cnts);                                 /* 这里默认的是最高优先级，根据实际情况修改             */
+//	SysTick_Config(cnts);   //这里默认的是最低优先级
+	
+	
+	
+	
+	
+	RCC_ClocksTypeDef  rcc_clocks;
+	uint32_t         cnts;
+
+	RCC_GetClocksFreq(&rcc_clocks);
+
+	cnts = (uint32_t)rcc_clocks.HCLK_Frequency / TICK_PER_SECOND;
+	cnts = cnts / 8;
+
+	SysTick_Config(cnts);
+	SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
 }
 
 /*$PAGE*/

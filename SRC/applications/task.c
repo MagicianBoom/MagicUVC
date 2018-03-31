@@ -68,7 +68,7 @@ float test[5];
 *	功能说明: 
 *	形    参：p_arg 是在创建该任务时传递的形参
 *	返 回 值: 无
-	优 先 级：
+*	优 先 级：
 *********************************************************************************************************
 */
 void AppTask_1ms(void *p_arg)
@@ -82,12 +82,8 @@ void AppTask_1ms(void *p_arg)
 		Get_Cycle_T(1)/1000000.0f;
 
 		ANO_DT_Data_Exchange();				//数传通信定时调用
-		
+
 		OSTimeDly(1, OS_OPT_TIME_DLY, &err);
-		
-		//System testing for ucOS magicUVC by LiuYang
-//		printf("Data exchange!\n");
-		//Test end
 	}   
 }
 
@@ -99,7 +95,7 @@ void AppTask_1ms(void *p_arg)
 *	功能说明: 
 *	形    参：p_arg 是在创建该任务时传递的形参
 *	返 回 值: 无
-	优 先 级：
+*	优 先 级：
 *********************************************************************************************************
 */
 void AppTask_2ms(void *p_arg)
@@ -114,10 +110,6 @@ void AppTask_2ms(void *p_arg)
 		inner_loop_time = Get_Cycle_T(0)/1000000.0f; 						//获取内环准确的执行周期
 		
 		test[0] = GetSysTime_us()/1000000.0f;
-
-//		//System testing for ucOS magicUVC by LiuYang
-//		printf("inner_loop_time:%f\n", inner_loop_time);
-//		//Test end
 		
 		MPU6050_Read(); 															//读取mpu6轴传感器
 
@@ -126,11 +118,6 @@ void AppTask_2ms(void *p_arg)
 		/*IMU更新姿态。输入：半个执行周期，三轴陀螺仪数据（转换到度每秒），三轴加速度计数据（4096--1G）；输出：ROLPITYAW姿态角*/
 		IMUupdate(0.5f *inner_loop_time,mpu6050.Gyro_deg.x, mpu6050.Gyro_deg.y, mpu6050.Gyro_deg.z, mpu6050.Acc.x, mpu6050.Acc.y, mpu6050.Acc.z,&Roll,&Pitch,&Yaw);
 		
-		//System testing for ucOS magicUVC by LiuYang
-		printf("Roll:%f\n", Roll);
-		//Test end
-
-
 		CTRL_1( inner_loop_time ); 										//内环角速度控制。输入：执行周期，期望角速度，测量角速度，角度前馈；输出：电机PWM占空比。<函数未封装>
 		
 		RC_Duty( inner_loop_time , Rc_Pwm_In );				// 遥控器通道数据处理 ，输入：执行周期，接收机pwm捕获的数据。
@@ -147,7 +134,7 @@ void AppTask_2ms(void *p_arg)
 *	功能说明: 	
 *	形    参：p_arg 是在创建该任务时传递的形参
 *	返 回 值: 无
-	优 先 级：
+*	优 先 级：
 *********************************************************************************************************
 */
 void AppTask_5ms(void *p_arg)
@@ -179,7 +166,7 @@ void AppTask_5ms(void *p_arg)
 *	功能说明: 	
 *	形    参：p_arg 是在创建该任务时传递的形参
 *	返 回 值: 无
-	优 先 级：
+*	优 先 级：
 *********************************************************************************************************
 */
 void AppTask_10ms(void *p_arg)
@@ -202,7 +189,7 @@ void AppTask_10ms(void *p_arg)
 *	功能说明: 	
 *	形    参：p_arg 是在创建该任务时传递的形参
 *	返 回 值: 无
-	优 先 级：
+*	优 先 级：
 *********************************************************************************************************
 */
 void AppTask_20ms(void *p_arg)
@@ -225,7 +212,7 @@ void AppTask_20ms(void *p_arg)
 *	功能说明: 	
 *	形    参：p_arg 是在创建该任务时传递的形参
 *	返 回 值: 无
-	优 先 级：
+*	优 先 级：
 *********************************************************************************************************
 */
 void AppTask_50ms(void *p_arg)

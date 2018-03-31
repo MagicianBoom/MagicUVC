@@ -33,9 +33,11 @@ void  AppTaskStart (void *p_arg)
 
    (void)p_arg;
 
- 	bsp_Init();
+ 	
 	CPU_Init();
 	BSP_Tick_Init();
+	
+	bsp_Init();
 	Init_Finish = All_Init();
 	
 #if OS_CFG_STAT_TASK_EN > 0u
@@ -47,15 +49,6 @@ void  AppTaskStart (void *p_arg)
 #endif
                                         
     AppTaskCreate();  
-
-	//System testing for ucOS magicUVC by LiuYang
-	printf("System Start!\n");
-	printf("System Start!\n");
-	printf("System Start!\n");
-	printf("System Start!\n");
-	printf("System Start!\n");
-	//Test end
-
 }
 
 //=======================================================================================

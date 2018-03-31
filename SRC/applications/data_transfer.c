@@ -276,7 +276,7 @@ void ANO_DT_Data_Receive_Prepare(u8 data)
 		RxBuffer[0]=data;
 	}
 	else if(state==1&&data==0xAF)
-	{
+	{	                                                                                                                              
 		state=2;
 		RxBuffer[1]=data;
 	}

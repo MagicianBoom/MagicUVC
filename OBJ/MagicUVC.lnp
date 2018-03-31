@@ -1,7 +1,7 @@
 --cpu Cortex-M4
 "..\obj\main.o"
-"..\obj\startup_stm32f40_41xxx.o"
 "..\obj\stm32f4xx_it.o"
+"..\obj\startup_stm32f40_41xxx.o"
 "..\obj\ano_of.o"
 "..\obj\anotc_baro_ctrl.o"
 "..\obj\ctrl.o"

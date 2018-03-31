@@ -88,6 +88,9 @@ void Usart2_IRQ(void)
 {
 	u8 com_data;
 	
+	CPU_SR_ALLOC();
+    CPU_CRITICAL_ENTER();	
+	
 	if(USART2->SR & USART_SR_ORE)//OREÖÐ¶Ï
 	{
 		com_data = USART2->DR;
@@ -115,8 +118,11 @@ void Usart2_IRQ(void)
 		//USART_ClearITPendingBit(USART2,USART_IT_TXE);
 	}
 
+	CPU_CRITICAL_EXIT();
 
+    OSTimeTick();                                           /* Call uC/OS-III's OSTimeTick()                          */
 
+    OSIntExit();                                            /* Tell uC/OS-III that we are leaving the ISR           */
 }
 
 void Usart2_Send(unsigned char *DataToSend ,u8 data_num)

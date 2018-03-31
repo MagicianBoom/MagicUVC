@@ -207,7 +207,7 @@ void Thr_Ctrl(float T)
 			thr = LIMIT(thr,0,500);
 		}
 		
-		thr_value = Height_Ctrl(T,thr,fly_ready,1);   //实际使用值
+		thr_value = Height_Ctrl(T,thr,fly_ready,0);   //实际使用值
 	}
 	else
 	{

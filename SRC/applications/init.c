@@ -28,8 +28,8 @@ u8 All_Init()
 	PWM_IN_Init();						//初始化接收机采集功能
 	
 	PWM_Out_Init(400);				//初始化电调输出功能	
-	
-	Usb_Hid_Init();						//飞控usb接口的hid初始化
+
+	Usb_Hid_Init(); 					//飞控usb接口的hid初始化
 	
 	MS5611_Init();						//气压计初始化
 	
@@ -40,7 +40,7 @@ u8 All_Init()
 	LED_Init();								//LED功能初始化
 //	
 	uart_init(115200); 
-	Usart2_Init(500000);			//串口2初始化，函数参数为波特率
+	Usart2_Init(115200);			//串口2初始化，函数参数为波特率
 	Uart4_Init(500000);
 
 //	
